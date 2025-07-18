@@ -2,14 +2,14 @@
 import IconX from '@/components/icons/IconX.vue';
 import IconLinkedIn from '@/components/icons/IconLinkedIn.vue';
 import IconPencilSquare from '@/components/icons/IconPencilSquare.vue';
-import IconCogLoop from '@/components/icons/IconCogLoop.vue';
+// import IconCogLoop from '@/components/icons/IconCogLoop.vue';
 
 </script>
 
 <template>
   <div class="flex flex-col items-center justify-center gap-2">
-    <h2 class="text-center text-brand">Website still in development...</h2>
-    <IconCogLoop class="size-6" />
+    <!-- <h2 class="text-center text-brand">Website still in development...</h2> -->
+    <!-- <IconCogLoop class="size-6" /> -->
   </div>
   <div class="grid items-center min-h-[80vh] place-items-center">
     <div id="yarmy-card" class="flex flex-col items-center justify-center px-6 py-12 overflow-hidden">
