@@ -12,7 +12,7 @@
       </div>
 
       <!-- Main Content Grid -->
-      <div class="grid items-start gap-8 lg:grid-cols-2">
+      <div class="grid gap-8 lg:grid-cols-2">
 
         <!-- Bio Section -->
         <div class="p-8 card-surface">
@@ -20,11 +20,12 @@
           <p class="text-lg leading-relaxed text-light">
             I'm a full-stack software engineer with <strong class="text-lightest">3+ years</strong> building and scaling web
             applications, RESTful APIs, and mobile solutions across fintech, civic-tech, agri-tech, and ERP domains.
-            I've shipped national-scale systems ahead of schedule, cut developer onboarding time by 50%, and kept
-            platforms serving thousands of users at 99%+ uptime.
+            I've worked with strong teams to ship national-scale platforms like the Ghana Knowledge and Skills Bank
+            and the Births and Deaths Registry digitalisation programme, and I care about keeping production systems
+            reliable and easy to maintain.
           </p>
           <p class="mt-4 text-lg leading-relaxed text-light">
-            I'm happiest owning a feature from API design through deployment and production support — and I enjoy
+            I'm happiest owning a feature from API design through deployment and production support, and I enjoy
             turning business requirements into reliable, secure systems alongside the people I build with.
           </p>
         </div>
@@ -122,31 +123,32 @@ const techStack = [
 
 const stats = [
   { value: '3+', label: 'Years Experience' },
-  { value: '1M+', label: 'Requests / day' },
-  { value: '99%', label: 'Uptime sustained' },
-  { value: '50%', label: 'Faster onboarding' }
+  { value: '4', label: 'Flagship projects shipped' },
+  { value: 'National', label: 'Scale of systems shipped' },
+  { value: '2', label: 'World Bank funded platforms' }
 ]
 
 const experience = [
   {
     role: 'Full Stack Developer',
-    period: 'Jan 2026 – Present',
+    period: 'Jan 2026 to Present',
     company: 'Adaptive Computer Solutions, Ghana',
     points: [
-      'Re-engineered enterprise developer environments to cut provisioning and testing time by 50%.',
-      'Built secure, scalable backend APIs in Spring Boot and .NET Core supporting 1M+ requests/day.',
-      'Partnered with client stakeholders to turn business requirements into API contracts, reducing rework by 30%.'
+      'Re-engineered enterprise developer environments so teams spend less time provisioning and more time shipping.',
+      'Built secure, scalable backend APIs in Spring Boot and .NET Core for clients across multiple industries.',
+      'Partnered with client stakeholders to turn business requirements into clear, reliable API contracts.'
     ]
   },
   {
-    role: 'Full Stack Developer',
-    period: 'Nov 2022 – Sept 2025',
+    role: 'Full Stack Software Engineer',
+    period: 'Nov 2022 to Sept 2025',
     company: 'Npontu Technologies, Ghana',
     points: [
-      'Built full-stack apps (Vue.js, Laravel, Flask) for 5 active enterprise clients, improving reliability by 20%.',
-      'Designed responsive Vue.js interfaces that helped users finish tasks 30% faster.',
-      'Shipped RESTful APIs for secure third-party integrations across 5 partner systems with zero security incidents.',
-      'Developed Flutter mobile apps that extended service access to 1000+ additional users.'
+      'Contributed full-stack features to the Ghana Knowledge & Skills Bank, a national AI-powered learning platform launched in 2024.',
+      'Worked on the World Bank funded Births and Deaths Registry digitalisation programme.',
+      'Helped build loosely coupled module APIs for Kedebah, a multi-tenant ERP used by client companies nationwide.',
+      'Helped build HubConnect, a Flutter marketplace connecting farmers, suppliers and buyers.',
+      'Shipped RESTful APIs for secure third-party integrations.'
     ]
   }
 ]

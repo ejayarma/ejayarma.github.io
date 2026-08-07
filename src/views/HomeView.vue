@@ -44,23 +44,23 @@ import IconGithub from '@/components/icons/IconGithub.vue';
       <!-- Stats card -->
       <div id="yarmy-card" class="card-surface w-full max-w-sm p-8">
         <img class="mx-auto rounded-full size-40 border-2 border-brand" src="/moi.webp" alt="Emmanuel John Ayarma" width="160" height="160" fetchpriority="high">
-        <h2 class="mt-5 font-mono text-sm text-brand">// key numbers</h2>
+        <h2 class="mt-5 font-mono text-sm text-brand">// highlights</h2>
         <dl class="grid grid-cols-2 gap-4 mt-3">
           <div class="p-4 rounded-xl bg-darkest/60">
             <dt class="text-3xl font-extrabold text-brand tabular-nums">3+</dt>
             <dd class="mt-1 text-sm text-light">Years Experience</dd>
           </div>
           <div class="p-4 rounded-xl bg-darkest/60">
-            <dt class="text-3xl font-extrabold text-brand tabular-nums">1M+</dt>
-            <dd class="mt-1 text-sm text-light">Requests / day</dd>
+            <dt class="text-3xl font-extrabold text-brand tabular-nums">4</dt>
+            <dd class="mt-1 text-sm text-light">Flagship Projects</dd>
           </div>
           <div class="p-4 rounded-xl bg-darkest/60">
-            <dt class="text-3xl font-extrabold text-brand tabular-nums">99%</dt>
-            <dd class="mt-1 text-sm text-light">Uptime sustained</dd>
+            <dt class="text-3xl font-extrabold text-brand tabular-nums">National</dt>
+            <dd class="mt-1 text-sm text-light">Scale of Systems Shipped</dd>
           </div>
           <div class="p-4 rounded-xl bg-darkest/60">
-            <dt class="text-3xl font-extrabold text-brand tabular-nums">50%</dt>
-            <dd class="mt-1 text-sm text-light">Faster onboarding</dd>
+            <dt class="text-3xl font-extrabold text-brand tabular-nums">2</dt>
+            <dd class="mt-1 text-sm text-light">World Bank Funded Platforms</dd>
           </div>
         </dl>
       </div>

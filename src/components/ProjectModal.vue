@@ -42,6 +42,14 @@
                   </p>
                 </div>
 
+                <!-- Approach / engineering decisions -->
+                <div v-if="project?.approach">
+                  <h3 class="mb-3 font-mono text-sm text-brand">// approach</h3>
+                  <p class="leading-relaxed text-light">
+                    {{ project?.approach }}
+                  </p>
+                </div>
+
                 <!-- Technologies -->
                 <div>
                   <h3 class="mb-3 font-mono text-sm text-brand">// stack</h3>
@@ -86,6 +94,18 @@
                       View Source
                     </a>
                   </div>
+                </div>
+
+                <!-- Confidentiality notice for NDA projects -->
+                <div v-else-if="project?.confidential">
+                  <h3 class="mb-3 font-mono text-sm text-brand">// access</h3>
+                  <p class="leading-relaxed text-light">
+                    Client project under NDA. The codebase and live demo aren't public.
+                    <a
+                      href="mailto:johnayarmahe@gmail.com?subject=Portfolio%20walkthrough%20request"
+                      class="font-medium text-brand hover:text-brandBright"
+                    >Request a walkthrough</a>.
+                  </p>
                 </div>
               </div>
             </div>

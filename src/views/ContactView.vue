@@ -24,7 +24,7 @@
         <!-- Email Card -->
         <div class="p-8 card-surface transition-shadow duration-300 hover:shadow-glow">
           <h3 class="mb-2 text-xl font-bold text-lightest">Email</h3>
-          <p class="mb-4 text-sm text-light">Send me a message — I reply fast.</p>
+          <p class="mb-4 text-sm text-light">Send me a message. I reply fast.</p>
           <a href="mailto:johnayarmahe@gmail.com"
              class="text-lg font-medium text-brand transition-colors duration-300 hover:text-brandBright">
             johnayarmahe@gmail.com
@@ -34,7 +34,7 @@
         <!-- Start a Project Card -->
         <div class="p-8 card-surface transition-shadow duration-300 hover:shadow-glow">
           <h3 class="mb-2 text-xl font-bold text-lightest">Start a Project</h3>
-          <p class="mb-4 text-sm text-light">Skip the small talk — send your pitch straight to my inbox.</p>
+          <p class="mb-4 text-sm text-light">Skip the small talk. Send your pitch straight to my inbox.</p>
           <a href="mailto:johnayarmahe@gmail.com?subject=Project%20inquiry"
              class="text-lg font-medium text-brand transition-colors duration-300 hover:text-brandBright">
             Pitch your idea
@@ -113,7 +113,7 @@
           <h3 class="mb-4 text-2xl font-bold">Have a Project in Mind?</h3>
           <p class="max-w-2xl mx-auto mb-6 text-light">
             Tell me what you're building and I'll reply with honest thoughts on scope, timeline,
-            and how I'd approach it — no fluff, no pressure.
+            and how I'd approach it. No fluff, no pressure.
           </p>
           <a href="mailto:johnayarmahe@gmail.com" class="btn-primary">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

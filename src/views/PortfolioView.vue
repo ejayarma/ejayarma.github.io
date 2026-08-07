@@ -77,41 +77,49 @@ const projects = [
   {
     id: 1,
     title: 'Ghana Births & Deaths Registry Digitalisation',
-    description: 'Full-stack features for a World Bank–funded national digital identity and civil registration system serving millions of citizens. Delivered assigned milestones ahead of schedule for the Ghana Births and Deaths Registry Harmonisation and Digitalisation programme.',
-    shortDescription: 'National digital identity & civil registration system (World Bank–funded)',
+    description: 'Full-stack features for the Ghana Births and Deaths Registry Harmonisation and Digitalisation programme, a World Bank funded national digital identity and civil registration system.',
+    approach: 'The Registry runs inside the World Bank\u2019s Public Sector Reform for Results programme, so continuity matters more than speed. As part of the team, I built my assigned features on Laravel with MySQL behind Nginx, keeping schema changes migration-based so each phased rollout stayed isolated.',
+    shortDescription: 'National digital identity & civil registration system (World Bank funded)',
     technologies: ['Laravel', 'JavaScript', 'MySQL', 'Nginx'],
     liveUrl: null,
     githubUrl: null,
+    confidential: true,
     category: 'web'
   },
   {
     id: 2,
     title: 'Ghana Knowledge and Skills Bank',
-    description: 'A national platform for managing educational resources and skills development programmes across Ghana — built to give learners and administrators one clear place to work.',
+    description: 'A national educational platform launched by Ghana’s Ministry of Education and Ministry of Communications in 2024. Free, AI-powered learning for students at every level, accessible even offline. Built by the team at Npontu Technologies.',
+    approach: 'Learners and administrators live in very different workflows, so instead of one monolithic page we split the work into a Laravel API consumed by a Vue.js and Tailwind front end. A shared content model keeps the platform extensible. Today it carries 5M+ learning archives and serves 575k+ active users, making Ghana the second country in Africa, after Egypt, to run a national digital learning infrastructure.',
     shortDescription: 'National educational resource management platform',
     technologies: ['Vue.js', 'Laravel', 'MySQL', 'Tailwind CSS'],
     liveUrl: null,
     githubUrl: null,
+    confidential: true,
     category: 'web'
   },
   {
     id: 3,
     title: 'Kedebah ERP System',
-    description: 'Scalable, loosely coupled module APIs for a multi-tenant ERP system. Reduced API latency by 20% and increased throughput to support over 100 concurrent tenants.',
+    description: 'Scalable, loosely coupled module APIs for Kedebah, a multi-tenant ERP built by Npontu Technologies that unifies finance, HR, project management, retail and CRM. My work on the API layer helped cut latency by 20% and support over 100 concurrent tenants.',
+    approach: 'Multi-tenancy forced isolation and scale at the same time. One codebase serves multiple client companies nationwide, so the team decomposed it into loosely coupled module APIs across Flask and Laravel. My focus was the API layer: Redis in front of hot reads to cut latency by about 20%, and relational state in PostgreSQL. The system now sustains 100+ concurrent tenants.',
     shortDescription: 'Multi-tenant ERP with loosely coupled module APIs',
     technologies: ['Flask', 'Laravel', 'Redis', 'Nginx', 'PostgreSQL'],
     liveUrl: null,
     githubUrl: null,
+    confidential: true,
     category: 'web'
   },
   {
     id: 4,
     title: 'HubConnect Mobile Application',
-    description: 'A mobile platform connecting agricultural stakeholders. Reduced post-harvest losses to near-zero and expanded farmer access to agrochemical and agri-input resources for over 1,000 users.',
+    description: 'A mobile marketplace on Google Play that connects farmers, suppliers and buyers across the agricultural value chain. The app expanded farmer access to agrochemical and agri-input resources for over 1,000 users and helped push post-harvest losses toward zero.',
+    approach: 'Ghana loses about $1.9B a year to post-harvest loss, so the fix had to reach farmers on phones, not desktops. The team chose Flutter for one cross-platform codebase on top of a Laravel REST API, so updates ship to Android and iOS together. The app now serves 1,000+ users while helping push post-harvest losses toward zero.',
     shortDescription: 'Agri-tech mobile platform connecting agricultural stakeholders',
     technologies: ['Flutter', 'Laravel', 'REST APIs'],
     liveUrl: null,
     githubUrl: null,
+    confidential: true,
     category: 'mobile'
   }
 ]
