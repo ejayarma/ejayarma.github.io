@@ -42,6 +42,14 @@
                   </p>
                 </div>
 
+                <!-- Approach / engineering decisions -->
+                <div v-if="project?.approach">
+                  <h3 class="mb-3 font-mono text-sm text-brand">// approach</h3>
+                  <p class="leading-relaxed text-light">
+                    {{ project?.approach }}
+                  </p>
+                </div>
+
                 <!-- Technologies -->
                 <div>
                   <h3 class="mb-3 font-mono text-sm text-brand">// stack</h3>
