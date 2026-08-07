@@ -43,7 +43,7 @@ import IconGithub from '@/components/icons/IconGithub.vue';
 
       <!-- Stats card -->
       <div id="yarmy-card" class="card-surface w-full max-w-sm p-8">
-        <img class="mx-auto rounded-full size-40 border-2 border-brand" src="@/assets/images/moi-hd.jpg" alt="Emmanuel John Ayarma" width="160" height="160" fetchpriority="high">
+        <img class="mx-auto rounded-full size-40 border-2 border-brand" src="/moi.webp" alt="Emmanuel John Ayarma" width="160" height="160" fetchpriority="high">
         <h2 class="mt-5 font-mono text-sm text-brand">// key numbers</h2>
         <dl class="grid grid-cols-2 gap-4 mt-3">
           <div class="p-4 rounded-xl bg-darkest/60">
