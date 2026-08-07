@@ -124,7 +124,7 @@ const techStack = [
 const stats = [
   { value: '3+', label: 'Years Experience' },
   { value: '4', label: 'Flagship projects shipped' },
-  { value: '99%', label: 'Uptime sustained' },
+  { value: 'National', label: 'Scale of systems shipped' },
   { value: '2', label: 'World Bank funded platforms' }
 ]
 

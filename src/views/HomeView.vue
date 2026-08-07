@@ -55,8 +55,8 @@ import IconGithub from '@/components/icons/IconGithub.vue';
             <dd class="mt-1 text-sm text-light">Flagship Projects</dd>
           </div>
           <div class="p-4 rounded-xl bg-darkest/60">
-            <dt class="text-3xl font-extrabold text-brand tabular-nums">99%</dt>
-            <dd class="mt-1 text-sm text-light">Uptime Sustained</dd>
+            <dt class="text-3xl font-extrabold text-brand tabular-nums">National</dt>
+            <dd class="mt-1 text-sm text-light">Scale of Systems Shipped</dd>
           </div>
           <div class="p-4 rounded-xl bg-darkest/60">
             <dt class="text-3xl font-extrabold text-brand tabular-nums">2</dt>
