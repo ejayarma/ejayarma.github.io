@@ -26,16 +26,16 @@ import IconGithub from '@/components/icons/IconGithub.vue';
         </div>
 
         <div class="flex gap-4 mt-10 justify-center lg:justify-start">
-          <a class="p-2 rounded-full bg-brand text-darkest transition-transform duration-200 hover:scale-110 cursor-pointer" target="_blank" rel="noopener noreferrer" title="LinkedIn" href="https://www.linkedin.com/in/emmanuel-john-ayarma">
+          <a class="p-2 rounded-full bg-brand text-darkest transition-transform duration-200 hover:scale-110 cursor-pointer" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" href="https://www.linkedin.com/in/emmanuel-john-ayarma">
             <IconLinkedIn class="size-6" />
           </a>
-          <a class="p-2 rounded-full bg-brand text-darkest transition-transform duration-200 hover:scale-110 cursor-pointer" target="_blank" rel="noopener noreferrer" title="X" href="https://twitter.com/ejayarma">
+          <a class="p-2 rounded-full bg-brand text-darkest transition-transform duration-200 hover:scale-110 cursor-pointer" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" href="https://twitter.com/ejayarma">
             <IconX class="size-6" />
           </a>
-          <a class="p-2 rounded-full bg-brand text-darkest transition-transform duration-200 hover:scale-110 cursor-pointer" target="_blank" rel="noopener noreferrer" title="Blog" href="https://dev.to/ejayarma">
+          <a class="p-2 rounded-full bg-brand text-darkest transition-transform duration-200 hover:scale-110 cursor-pointer" target="_blank" rel="noopener noreferrer" aria-label="Blog on Dev.to" href="https://dev.to/ejayarma">
             <IconPencilSquare class="size-6" />
           </a>
-          <a class="p-2 rounded-full bg-brand text-darkest transition-transform duration-200 hover:scale-110 cursor-pointer" target="_blank" rel="noopener noreferrer" title="GitHub" href="https://github.com/ejayarma">
+          <a class="p-2 rounded-full bg-brand text-darkest transition-transform duration-200 hover:scale-110 cursor-pointer" target="_blank" rel="noopener noreferrer" aria-label="GitHub" href="https://github.com/ejayarma">
             <IconGithub class="size-6" />
           </a>
         </div>

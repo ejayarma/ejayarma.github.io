@@ -13,6 +13,9 @@
         <p class="max-w-2xl mx-auto mt-6 text-lg text-light">
           Open to full-time roles, freelance work, and collaborations. If you've got a project in mind, I'd love to hear about it.
         </p>
+        <p class="mt-3 font-mono text-sm text-light">
+          // based in Accra, Ghana &middot; GMT
+        </p>
       </div>
 
       <!-- Contact Cards Grid -->
@@ -28,13 +31,14 @@
           </a>
         </div>
 
-        <!-- Availability Card -->
+        <!-- Start a Project Card -->
         <div class="p-8 card-surface transition-shadow duration-300 hover:shadow-glow">
-          <h3 class="mb-2 text-xl font-bold text-lightest">Let's Chat</h3>
-          <p class="mb-4 text-sm text-light">Quick response guaranteed.</p>
-          <p class="text-lg font-medium text-light">
-            Available for <span class="text-brand">freelance projects</span>
-          </p>
+          <h3 class="mb-2 text-xl font-bold text-lightest">Start a Project</h3>
+          <p class="mb-4 text-sm text-light">Skip the small talk — send your pitch straight to my inbox.</p>
+          <a href="mailto:johnayarmahe@gmail.com?subject=Project%20inquiry"
+             class="text-lg font-medium text-brand transition-colors duration-300 hover:text-brandBright">
+            Pitch your idea
+          </a>
         </div>
 
       </div>

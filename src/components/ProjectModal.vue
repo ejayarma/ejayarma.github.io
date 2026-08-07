@@ -4,7 +4,12 @@
     <Transition name="modal">
       <div
         v-if="isOpen"
-        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75 backdrop-blur-sm"
+        ref="dialogRef"
+        tabindex="-1"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-80 backdrop-blur-md"
         @click="closeModal"
       >
         <div
@@ -13,10 +18,10 @@
         >
           <!-- Modal Header -->
           <div class="flex items-center justify-between p-6 border-b border-mid/50">
-            <h2 class="text-2xl font-bold text-lightest">{{ project?.title }}</h2>
+            <h2 id="modal-title" class="text-2xl font-bold text-lightest">{{ project?.title }}</h2>
             <button
               @click="closeModal"
-              class="transition-colors duration-200 cursor-pointer text-light hover:text-lightest"
+              class="p-2 -mr-2 transition-colors duration-200 cursor-pointer rounded-lg text-light hover:text-lightest hover:bg-dark"
               aria-label="Close project details"
             >
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -27,7 +32,7 @@
 
           <!-- Modal Content -->
           <div class="max-h-[calc(90vh-120px)] overflow-y-auto">
-            <div class="p-6">
+            <div class="p-6 pb-10">
               <div class="space-y-6">
                 <!-- Description -->
                 <div>
@@ -92,7 +97,7 @@
 </template>
 
 <script setup>
-import { watch } from 'vue'
+import { ref, watch } from 'vue'
 
 const props = defineProps({
   isOpen: {
@@ -107,6 +112,9 @@ const props = defineProps({
 
 const emit = defineEmits(['close'])
 
+const dialogRef = ref(null)
+let lastFocused = null
+
 const closeModal = () => {
   emit('close')
 }
@@ -117,15 +125,40 @@ const handleEscape = (e) => {
   }
 }
 
+const trapFocus = (e) => {
+  if (e.key !== 'Tab') return
+  const nodes = dialogRef.value?.querySelectorAll(
+    'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+  )
+  if (!nodes || nodes.length === 0) return
+  const first = nodes[0]
+  const last = nodes[nodes.length - 1]
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault()
+    last.focus()
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault()
+    first.focus()
+  }
+}
+
 watch(
   () => props.isOpen,
   (newVal) => {
     if (newVal) {
+      lastFocused = document.activeElement
       document.addEventListener('keydown', handleEscape)
+      document.addEventListener('keydown', trapFocus)
       document.body.style.overflow = 'hidden'
+      requestAnimationFrame(() => {
+        const closeBtn = dialogRef.value?.querySelector('button[aria-label="Close project details"]')
+        ;(closeBtn || dialogRef.value)?.focus()
+      })
     } else {
       document.removeEventListener('keydown', handleEscape)
+      document.removeEventListener('keydown', trapFocus)
       document.body.style.overflow = 'auto'
+      lastFocused?.focus?.()
     }
   }
 )

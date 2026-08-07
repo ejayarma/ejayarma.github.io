@@ -93,7 +93,7 @@
           </div>
           <div>
             <h3 class="font-bold text-lightest">AWS Certified Cloud Practitioner</h3>
-            <p class="mt-1 text-light">Amazon Web Services (2026 – 2029)</p>
+            <p class="mt-1 text-light">Amazon Web Services (2026)</p>
           </div>
         </div>
       </div>
@@ -116,8 +116,8 @@ const techStack = [
   { name: 'Redis', icon: 'si:redis' },
   { name: 'Nginx', icon: 'si:nginx' },
   { name: 'AWS', icon: 'si:amazonwebservices' },
-  { name: 'Microservices', icon: 'lucide:boxes' },
-  { name: 'CI/CD', icon: 'lucide:workflow' }
+  { name: 'Docker', icon: 'si:docker' },
+  { name: 'GitHub Actions', icon: 'si:githubactions' }
 ]
 
 const stats = [
