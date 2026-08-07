@@ -9,7 +9,7 @@
           PORTFOLIO
         </h1>
         <p class="max-w-2xl mx-auto text-lg text-light">
-          National-scale systems, enterprise platforms, and mobile apps built with modern technologies.
+          National-scale systems, enterprise platforms, and mobile apps I've designed, built, and shipped.
         </p>
       </div>
 
@@ -36,9 +36,17 @@
         @project-click="openModal"
       />
 
-      <p v-else class="py-20 text-center text-light">
-        No projects in this category yet.
-      </p>
+      <div v-else class="py-20 text-center text-light">
+        <p class="text-lg font-medium text-lightest">No projects in this category yet.</p>
+        <p class="mt-1 text-light">New work is always on the way. Browse everything instead.</p>
+        <button
+          type="button"
+          class="mt-6 btn-secondary"
+          @click="activeFilter = 'all'"
+        >
+          Show All Projects
+        </button>
+      </div>
 
       <!-- Project Modal -->
       <ProjectModal
@@ -88,8 +96,8 @@ const projects = [
   {
     id: 2,
     title: 'Ghana Knowledge and Skills Bank',
-    description: 'A comprehensive digital platform for managing educational resources and skills development programmes across Ghana, built with modern full-stack tooling.',
-    shortDescription: 'Educational resource management platform',
+    description: 'A national platform for managing educational resources and skills development programmes across Ghana — built to give learners and administrators one clear place to work.',
+    shortDescription: 'National educational resource management platform',
     image: gksbImg,
     images: [gksbImg, cloudImg, portraitImg2],
     technologies: ['Vue.js', 'Laravel', 'MySQL', 'Tailwind CSS'],

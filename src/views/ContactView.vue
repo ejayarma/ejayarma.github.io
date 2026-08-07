@@ -11,7 +11,7 @@
         </h1>
         <div class="w-24 h-1 mx-auto rounded-full bg-brand"></div>
         <p class="max-w-2xl mx-auto mt-6 text-lg text-light">
-          Open to full-time roles, freelance projects, and collaborations. Let's build something great together.
+          Open to full-time roles, freelance work, and collaborations. If you've got a project in mind, I'd love to hear about it.
         </p>
       </div>
 
@@ -106,16 +106,16 @@
       <!-- Call to Action -->
       <div class="mt-12 text-center">
         <div class="p-10 card-surface border-brand/30">
-          <h3 class="mb-4 text-2xl font-bold">Ready to Start a Project?</h3>
+          <h3 class="mb-4 text-2xl font-bold">Have a Project in Mind?</h3>
           <p class="max-w-2xl mx-auto mb-6 text-light">
-            I'm always excited to work on new challenges and collaborate with amazing people.
-            Let's discuss how we can bring your ideas to life.
+            Tell me what you're building and I'll reply with honest thoughts on scope, timeline,
+            and how I'd approach it — no fluff, no pressure.
           </p>
           <a href="mailto:johnayarmahe@gmail.com" class="btn-primary">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>
-            Get In Touch
+            Get in Touch
           </a>
         </div>
       </div>

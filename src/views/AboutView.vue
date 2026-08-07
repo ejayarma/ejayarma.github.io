@@ -18,14 +18,14 @@
         <div class="p-8 card-surface">
           <h2 class="mb-4 font-mono text-sm text-brand">// bio</h2>
           <p class="text-lg leading-relaxed text-light">
-            Full-stack software engineer with <strong class="text-lightest">3+ years</strong> building and scaling web
+            I'm a full-stack software engineer with <strong class="text-lightest">3+ years</strong> building and scaling web
             applications, RESTful APIs, and mobile solutions across fintech, civic-tech, agri-tech, and ERP domains.
-            Proven track record delivering national-scale systems ahead of schedule, cutting developer onboarding time
-            by 50%, and sustaining 99%+ uptime for platforms serving thousands of users.
+            I've shipped national-scale systems ahead of schedule, cut developer onboarding time by 50%, and kept
+            platforms serving thousands of users at 99%+ uptime.
           </p>
           <p class="mt-4 text-lg leading-relaxed text-light">
-            Comfortable owning a feature from API design through deployment and production support, collaborating with
-            stakeholders to turn business requirements into reliable, secure systems.
+            I'm happiest owning a feature from API design through deployment and production support — and I enjoy
+            turning business requirements into reliable, secure systems alongside the people I build with.
           </p>
         </div>
 
@@ -133,7 +133,7 @@ const experience = [
     period: 'Jan 2026 – Present',
     company: 'Adaptive Computer Solutions, Ghana',
     points: [
-      'Re-engineered enterprise developer environments, cutting provisioning and testing time by 50%.',
+      'Re-engineered enterprise developer environments to cut provisioning and testing time by 50%.',
       'Built secure, scalable backend APIs in Spring Boot and .NET Core supporting 1M+ requests/day.',
       'Partnered with client stakeholders to turn business requirements into API contracts, reducing rework by 30%.'
     ]
@@ -144,27 +144,9 @@ const experience = [
     company: 'Npontu Technologies, Ghana',
     points: [
       'Built full-stack apps (Vue.js, Laravel, Flask) for 5 active enterprise clients, improving reliability by 20%.',
-      'Designed responsive Vue.js interfaces that improved task completion speed by 30%.',
+      'Designed responsive Vue.js interfaces that helped users finish tasks 30% faster.',
       'Shipped RESTful APIs for secure third-party integrations across 5 partner systems with zero security incidents.',
       'Developed Flutter mobile apps that extended service access to 1000+ additional users.'
-    ]
-  },
-  {
-    role: 'Head Web Developer, Web Team',
-    period: '2021 – 2022',
-    company: 'National Union of Presbyterian Students (NUPSG), KNUST',
-    points: [
-      'Led a student web team to ship a Vue.js/Laravel platform within a 3-month deadline.',
-      'Owned uptime and maintenance for servers, databases, and apps serving 2,000+ members at 99%+ uptime.',
-      'Introduced proactive security controls protecting member data with zero breaches.'
-    ]
-  },
-  {
-    role: 'Application Support',
-    period: '',
-    company: 'SAYeTECH',
-    points: [
-      'Maintained the company production website, reducing average incident resolution time by 25%.'
     ]
   }
 ]

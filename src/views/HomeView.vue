@@ -74,7 +74,7 @@ import IconGithub from '@/components/icons/IconGithub.vue';
       <h2 class="mt-2 mb-4 text-3xl font-bold tracking-tight md:text-4xl">Get My CV</h2>
       <p class="mx-auto mb-8 max-w-2xl text-lg text-light">
         Want the full story? Download my resume for a complete breakdown of my experience,
-        projects, and skills — from national-scale systems to mobile apps.
+        projects, and skills: from national-scale systems to mobile apps.
       </p>
       <a class="btn-primary" href="/Emmanuel-John-Ayarma-CV-SWE-FS.pdf" download>
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
