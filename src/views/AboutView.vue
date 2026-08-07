@@ -139,14 +139,15 @@ const experience = [
     ]
   },
   {
-    role: 'Full Stack Developer',
+    role: 'Full Stack Software Engineer',
     period: 'Nov 2022 – Sept 2025',
     company: 'Npontu Technologies, Ghana',
     points: [
-      'Built full-stack apps (Vue.js, Laravel, Flask) for 5 active enterprise clients, improving reliability by 20%.',
-      'Designed responsive Vue.js interfaces that helped users finish tasks 30% faster.',
-      'Shipped RESTful APIs for secure third-party integrations across 5 partner systems with zero security incidents.',
-      'Developed Flutter mobile apps that extended service access to 1000+ additional users.'
+      'Built full-stack features for the Ghana Knowledge & Skills Bank — a national AI-powered learning platform launched in 2024 that now serves 575k+ active users.',
+      'Delivered milestones ahead of schedule on the World Bank–funded Births and Deaths Registry digitalisation programme.',
+      'Designed loosely coupled module APIs for Kedebah, a multi-tenant ERP used by client companies nationwide, cutting API latency by 20%.',
+      'Developed HubConnect, a Flutter marketplace connecting farmers, suppliers and buyers for 1,000+ users.',
+      'Shipped RESTful APIs for secure third-party integrations with zero security incidents.'
     ]
   }
 ]
