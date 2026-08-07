@@ -62,13 +62,6 @@
 import { ref, computed } from 'vue'
 import ProjectSection from '@/components/ProjectSection.vue'
 import ProjectModal from '@/components/ProjectModal.vue'
-import cloudImg from '@/assets/images/abstract-cloud.jpeg'
-import portraitImg from '@/assets/images/hero-pic.png'
-import portraitImg2 from '@/assets/images/hero-pic2.png'
-import bdrImg from '@/assets/projects/bdr.svg'
-import gksbImg from '@/assets/projects/gksb.svg'
-import erpImg from '@/assets/projects/erp.svg'
-import hubconnectImg from '@/assets/projects/hubconnect.svg'
 
 const isModalOpen = ref(false)
 const selectedProject = ref(null)
@@ -86,8 +79,6 @@ const projects = [
     title: 'Ghana Births & Deaths Registry Digitalisation',
     description: 'Full-stack features for a World Bank–funded national digital identity and civil registration system serving millions of citizens. Delivered assigned milestones ahead of schedule for the Ghana Births and Deaths Registry Harmonisation and Digitalisation programme.',
     shortDescription: 'National digital identity & civil registration system (World Bank–funded)',
-    image: bdrImg,
-    images: [bdrImg, cloudImg, portraitImg],
     technologies: ['Laravel', 'JavaScript', 'MySQL', 'Nginx'],
     liveUrl: null,
     githubUrl: null,
@@ -98,8 +89,6 @@ const projects = [
     title: 'Ghana Knowledge and Skills Bank',
     description: 'A national platform for managing educational resources and skills development programmes across Ghana — built to give learners and administrators one clear place to work.',
     shortDescription: 'National educational resource management platform',
-    image: gksbImg,
-    images: [gksbImg, cloudImg, portraitImg2],
     technologies: ['Vue.js', 'Laravel', 'MySQL', 'Tailwind CSS'],
     liveUrl: null,
     githubUrl: null,
@@ -110,8 +99,6 @@ const projects = [
     title: 'Kedebah ERP System',
     description: 'Scalable, loosely coupled module APIs for a multi-tenant ERP system. Reduced API latency by 20% and increased throughput to support over 100 concurrent tenants.',
     shortDescription: 'Multi-tenant ERP with loosely coupled module APIs',
-    image: erpImg,
-    images: [erpImg, cloudImg, portraitImg],
     technologies: ['Flask', 'Laravel', 'Redis', 'Nginx', 'PostgreSQL'],
     liveUrl: null,
     githubUrl: null,
@@ -122,8 +109,6 @@ const projects = [
     title: 'HubConnect Mobile Application',
     description: 'A mobile platform connecting agricultural stakeholders. Reduced post-harvest losses to near-zero and expanded farmer access to agrochemical and agri-input resources for over 1,000 users.',
     shortDescription: 'Agri-tech mobile platform connecting agricultural stakeholders',
-    image: hubconnectImg,
-    images: [hubconnectImg, cloudImg, portraitImg2],
     technologies: ['Flutter', 'Laravel', 'REST APIs'],
     liveUrl: null,
     githubUrl: null,

@@ -4,29 +4,13 @@
     class="overflow-hidden transition-[transform,box-shadow] duration-300 card-surface hover:shadow-glow hover:-translate-y-1 cursor-pointer group"
     @click="$emit('click')"
   >
-    <!-- Image Section -->
-    <div class="relative h-44 overflow-hidden">
-      <img
-        :src="project.image"
-        :alt="project.title"
-        width="640"
-        height="360"
-        loading="lazy"
-        class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-      />
-      <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-darkest to-transparent group-hover:opacity-70"></div>
-
-      <!-- Category Badge -->
-      <div class="absolute top-4 left-4">
-        <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-darkest bg-brand rounded-full">
-          {{ project.category }}
-        </span>
-      </div>
-    </div>
-
     <!-- Content Section -->
     <div class="p-6">
-      <h3 class="mb-2 text-xl font-bold transition-colors duration-300 group-hover:text-brand">
+      <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-darkest bg-brand rounded-full">
+        {{ project.category }}
+      </span>
+
+      <h3 class="mt-3 mb-2 text-xl font-bold transition-colors duration-300 group-hover:text-brand">
         {{ project.title }}
       </h3>
 

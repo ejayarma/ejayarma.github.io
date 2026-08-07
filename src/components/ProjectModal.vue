@@ -26,46 +26,7 @@
           </div>
 
           <!-- Modal Content -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 max-h-[calc(90vh-120px)] overflow-y-auto">
-            <!-- Image Section -->
-            <div class="p-6 border-b lg:border-b-0 lg:border-r border-mid/50">
-              <div class="relative">
-                <img
-                  :src="project?.images[currentSlide]"
-                  :alt="`${project?.title} - Image ${currentSlide + 1}`"
-                  width="640"
-                  height="400"
-                  class="object-cover w-full h-64 lg:h-80 rounded-lg"
-                />
-
-                <button
-                  v-if="project?.images?.length > 1"
-                  @click="prevSlide"
-                  class="absolute left-2 top-1/2 -translate-y-1/2 p-2 text-darkest bg-brand/90 rounded-full transition-colors duration-200 hover:bg-brand cursor-pointer"
-                  aria-label="Previous image"
-                >
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                  </svg>
-                </button>
-                <button
-                  v-if="project?.images?.length > 1"
-                  @click="nextSlide"
-                  class="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-darkest bg-brand/90 rounded-full transition-colors duration-200 hover:bg-brand cursor-pointer"
-                  aria-label="Next image"
-                >
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </button>
-
-                <p v-if="project?.images?.length > 1" class="mt-2 text-xs text-center font-mono text-light">
-                  {{ currentSlide + 1 }} / {{ project.images.length }}
-                </p>
-              </div>
-            </div>
-
-            <!-- Project Details Section -->
+          <div class="max-h-[calc(90vh-120px)] overflow-y-auto">
             <div class="p-6">
               <div class="space-y-6">
                 <!-- Description -->
@@ -131,7 +92,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { watch } from 'vue'
 
 const props = defineProps({
   isOpen: {
@@ -145,19 +106,6 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['close'])
-
-const currentSlide = ref(0)
-
-const nextSlide = () => {
-  if (!props.project?.images?.length) return
-  currentSlide.value = (currentSlide.value + 1) % props.project.images.length
-}
-
-const prevSlide = () => {
-  if (!props.project?.images?.length) return
-  currentSlide.value =
-    (currentSlide.value - 1 + props.project.images.length) % props.project.images.length
-}
 
 const closeModal = () => {
   emit('close')
@@ -173,20 +121,12 @@ watch(
   () => props.isOpen,
   (newVal) => {
     if (newVal) {
-      currentSlide.value = 0
       document.addEventListener('keydown', handleEscape)
       document.body.style.overflow = 'hidden'
     } else {
       document.removeEventListener('keydown', handleEscape)
       document.body.style.overflow = 'auto'
     }
-  }
-)
-
-watch(
-  () => props.project,
-  () => {
-    currentSlide.value = 0
   }
 )
 </script>
