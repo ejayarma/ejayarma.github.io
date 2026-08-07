@@ -7,7 +7,8 @@ import IconGithub from '@/components/icons/IconGithub.vue';
 
 
 <template>
-  <section class="min-h-[calc(100vh-65px)]">
+  <div class="home">
+    <section class="min-h-[calc(100vh-65px)]">
     <div class="flex flex-col items-center justify-center gap-12 px-6 py-16 mx-auto max-w-6xl lg:flex-row lg:gap-20">
       <!-- Intro -->
       <div class="max-w-xl text-center lg:text-left">
@@ -83,7 +84,8 @@ import IconGithub from '@/components/icons/IconGithub.vue';
         Download CV (PDF)
       </a>
     </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <style scoped>

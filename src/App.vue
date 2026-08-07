@@ -12,9 +12,9 @@ import AppHeader from './components/AppHeader.vue'
   </a>
   <AppHeader />
   <main id="main-content">
-    <RouterView v-slot="{ Component }">
+    <RouterView v-slot="{ Component, route }">
       <Transition name="page" mode="out-in">
-        <component :is="Component" />
+        <component :is="Component" :key="route.path" />
       </Transition>
     </RouterView>
   </main>
