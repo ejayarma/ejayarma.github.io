@@ -1,55 +1,45 @@
 <!-- src/views/AboutView.vue -->
 <template>
-  <div class="min-h-screen px-4 py-12 bg-gradient-to-br from-lightest via-light to-mid/20">
-    <div class="container max-w-4xl mx-auto">
+  <div class="min-h-screen px-4 py-16">
+    <div class="mx-auto max-w-5xl">
       <!-- Header Section -->
       <div class="mb-12 text-center">
-        <h1 class="mb-4 text-5xl font-bold tracking-tight md:text-6xl text-darkest">
+        <p class="section-eyebrow">&gt; who am i</p>
+        <h1 class="mt-2 mb-4 text-4xl font-bold tracking-tight md:text-5xl">
           ABOUT
         </h1>
         <div class="w-24 h-1 mx-auto rounded-full bg-brand"></div>
       </div>
 
       <!-- Main Content Grid -->
-      <div class="grid items-start gap-12 lg:grid-cols-2">
-        
+      <div class="grid items-start gap-8 lg:grid-cols-2">
+
         <!-- Bio Section -->
-        <div class="p-8 transition-shadow duration-300 bg-white border shadow-xl rounded-2xl border-light/50 hover:shadow-2xl">
-          <div class="flex items-center mb-6">
-            <div class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-brand">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-bold text-darkest">Bio</h2>
-          </div>
-          
-          <p class="text-lg leading-relaxed text-dark">
-            Full-stack Web Developer with over 3 years of experience in developing and managing robust web
-            applications, mobile apps, and APIs using modern front-end and back-end technologies. Proficient in
-            leveraging valuable skills to build end-to-end solutions that enhance digital presence and operational
-            efficiency. Strong leadership and collaboration skills with a solid foundation in Computer Engineering and
-            agile methodologies.
+        <div class="p-8 card-surface">
+          <h2 class="mb-4 font-mono text-sm text-brand">// bio</h2>
+          <p class="text-lg leading-relaxed text-light">
+            Full-stack software engineer with <strong class="text-lightest">3+ years</strong> building and scaling web
+            applications, RESTful APIs, and mobile solutions across fintech, civic-tech, agri-tech, and ERP domains.
+            Proven track record delivering national-scale systems ahead of schedule, cutting developer onboarding time
+            by 50%, and sustaining 99%+ uptime for platforms serving thousands of users.
+          </p>
+          <p class="mt-4 text-lg leading-relaxed text-light">
+            Comfortable owning a feature from API design through deployment and production support, collaborating with
+            stakeholders to turn business requirements into reliable, secure systems.
           </p>
         </div>
 
         <!-- Tech Stack Section -->
-        <div class="p-8 transition-shadow duration-300 bg-white border shadow-xl rounded-2xl border-light/50 hover:shadow-2xl">
-          <div class="flex items-center mb-6">
-            <div class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-brand">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-bold text-darkest">Tech Stack</h2>
-          </div>
-          
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div v-for="tech in techStack" :key="tech.name" 
-                 class="flex items-center p-4 transition-all duration-300 border group rounded-xl bg-gradient-to-r from-lightest to-light/50 hover:from-brand/10 hover:to-brand/20 border-light/30 hover:border-brand/30">
-              <div class="w-3 h-3 mr-4 transition-colors duration-300 rounded-full"
-                   :class="tech.color"></div>
-              <span class="font-medium transition-colors duration-300 text-dark group-hover:text-darkest">
+        <div class="p-8 card-surface">
+          <h2 class="mb-4 font-mono text-sm text-brand">// stack</h2>
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div
+              v-for="tech in techStack"
+              :key="tech.name"
+              class="flex items-center p-3 transition-colors duration-200 border rounded-lg border-mid/50 hover:border-brand/50"
+            >
+              <div class="w-2.5 h-2.5 mr-3 rounded-full bg-brand"></div>
+              <span class="text-sm font-medium text-lightest">
                 {{ tech.name }}
               </span>
             </div>
@@ -59,28 +49,47 @@
       </div>
 
       <!-- Experience Highlights -->
-      <div class="p-8 mt-12 bg-white border shadow-xl rounded-2xl border-light/50">
-        <div class="flex items-center mb-6">
-          <div class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-brand">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
+      <div class="p-8 mt-8 card-surface">
+        <h2 class="mb-6 font-mono text-sm text-brand">// key strengths</h2>
+        <div class="grid gap-4 md:grid-cols-4">
+          <div v-for="stat in stats" :key="stat.label" class="p-5 text-center rounded-xl bg-darkest/60">
+            <div class="mb-1 text-3xl font-extrabold text-brand tabular-nums">{{ stat.value }}</div>
+            <div class="text-sm text-light">{{ stat.label }}</div>
           </div>
-          <h2 class="text-2xl font-bold text-darkest">Key Strengths</h2>
         </div>
-        
-        <div class="grid gap-6 md:grid-cols-3">
-          <div class="p-6 text-center border rounded-xl bg-gradient-to-b from-lightest to-light/30 border-light/30">
-            <div class="mb-2 text-3xl font-bold text-brand">3+</div>
-            <div class="font-medium text-dark">Years Experience</div>
+      </div>
+
+      <!-- Experience Timeline -->
+      <div class="mt-8">
+        <h2 class="mb-6 font-mono text-sm text-brand">// experience</h2>
+        <div class="space-y-6">
+          <div v-for="job in experience" :key="job.role + job.company" class="p-8 card-surface">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="text-xl font-bold text-lightest">{{ job.role }}</h3>
+              <span class="font-mono text-sm text-brand">{{ job.period }}</span>
+            </div>
+            <p class="mt-1 font-medium text-light">{{ job.company }}</p>
+            <ul class="mt-4 space-y-2 text-light">
+              <li v-for="(point, i) in job.points" :key="i" class="flex gap-3">
+                <span class="text-brand">▸</span>
+                <span>{{ point }}</span>
+              </li>
+            </ul>
           </div>
-          <div class="p-6 text-center border rounded-xl bg-gradient-to-b from-lightest to-light/30 border-light/30">
-            <div class="mb-2 text-3xl font-bold text-brand">∞</div>
-            <div class="font-medium text-dark">End-to-End Solutions</div>
+        </div>
+      </div>
+
+      <!-- Education & Certifications -->
+      <div class="mt-8 p-8 card-surface">
+        <h2 class="mb-4 font-mono text-sm text-brand">// education &amp; certifications</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div>
+            <h3 class="font-bold text-lightest">Bachelor of Science, Computer Engineering</h3>
+            <p class="mt-1 text-light">Kwame Nkrumah University of Science and Technology (KNUST)</p>
           </div>
-          <div class="p-6 text-center border rounded-xl bg-gradient-to-b from-lightest to-light/30 border-light/30">
-            <div class="mb-2 text-3xl font-bold text-brand">🎯</div>
-            <div class="font-medium text-dark">Agile Methodologies</div>
+          <div>
+            <h3 class="font-bold text-lightest">AWS Certified Cloud Practitioner</h3>
+            <p class="mt-1 text-light">Amazon Web Services (2026 – 2029)</p>
           </div>
         </div>
       </div>
@@ -89,24 +98,68 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'AboutView',
-  data() {
-    return {
-      techStack: [
-        { name: 'Laravel', color: 'bg-red-500' },
-        { name: 'Tailwind CSS', color: 'bg-brand' },
-        { name: 'Vue.js', color: 'bg-green-500' },
-        { name: 'React', color: 'bg-blue-500' },
-        { name: 'Next.js', color: 'bg-darkest' },
-        { name: 'Flutter', color: 'bg-blue-400' }
-      ]
-    }
-  }
-}
-</script>
+<script setup>
+const techStack = [
+  { name: 'Java / Spring Boot' },
+  { name: '.NET Core' },
+  { name: 'Laravel' },
+  { name: 'Flask / FastAPI' },
+  { name: 'Vue.js' },
+  { name: 'Flutter' },
+  { name: 'PostgreSQL & MySQL' },
+  { name: 'Redis' },
+  { name: 'Nginx' },
+  { name: 'AWS Cloud' },
+  { name: 'Microservices & Multi-Tenant' },
+  { name: 'CI/CD' }
+]
 
-<style scoped>
-/* Additional custom styles if needed */
-</style>
+const stats = [
+  { value: '3+', label: 'Years Experience' },
+  { value: '1M+', label: 'Requests / day' },
+  { value: '99%', label: 'Uptime sustained' },
+  { value: '50%', label: 'Faster onboarding' }
+]
+
+const experience = [
+  {
+    role: 'Full Stack Developer',
+    period: 'Jan 2026 – Present',
+    company: 'Adaptive Computer Solutions, Ghana',
+    points: [
+      'Re-engineered enterprise developer environments, cutting provisioning and testing time by 50%.',
+      'Built secure, scalable backend APIs in Spring Boot and .NET Core supporting 1M+ requests/day.',
+      'Partnered with client stakeholders to turn business requirements into API contracts, reducing rework by 30%.'
+    ]
+  },
+  {
+    role: 'Full Stack Developer',
+    period: 'Nov 2022 – Sept 2025',
+    company: 'Npontu Technologies, Ghana',
+    points: [
+      'Built full-stack apps (Vue.js, Laravel, Flask) for 5 active enterprise clients, improving reliability by 20%.',
+      'Designed responsive Vue.js interfaces that improved task completion speed by 30%.',
+      'Shipped RESTful APIs for secure third-party integrations across 5 partner systems with zero security incidents.',
+      'Developed Flutter mobile apps that extended service access to 1000+ additional users.'
+    ]
+  },
+  {
+    role: 'Head Web Developer, Web Team',
+    period: '2021 – 2022',
+    company: 'National Union of Presbyterian Students (NUPSG), KNUST',
+    points: [
+      'Led a student web team to ship a Vue.js/Laravel platform within a 3-month deadline.',
+      'Owned uptime and maintenance for servers, databases, and apps serving 2,000+ members at 99%+ uptime.',
+      'Introduced proactive security controls protecting member data with zero breaches.'
+    ]
+  },
+  {
+    role: 'Application Support',
+    period: '',
+    company: 'SAYeTECH',
+    points: [
+      'Maintained the company production website, reducing average incident resolution time by 25%.'
+    ]
+  }
+]
+</script>

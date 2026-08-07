@@ -8,18 +8,22 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter', 'Montserrat', ...defaultTheme.fontFamily.sans],
+        mono: ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
       },
       colors: {
         brand: "#5BC0BE",
-        darkest: "#1C2541",
-        dark: "#3A506B",
-        mid: "#7E99BB",
-        light: "#C7D6E8",
-        lightest: "#FFFFFF"
+        brandBright: "#7DE0DE",
+        darkest: "#0B1220",
+        dark: "#131D31",
+        mid: "#22304D",
+        light: "#8FA3C2",
+        lightest: "#E8EEF6",
+      },
+      boxShadow: {
+        glow: '0 0 24px rgba(91, 192, 190, 0.25)',
       },
     },
   },
   plugins: [],
 }
-

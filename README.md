@@ -1,6 +1,6 @@
-# yarmy-code
+# EJayArma — Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+Personal portfolio site for **Emmanuel John Ayarma**, Full-Stack Software Engineer, built with Vue 3 + Vite + Tailwind CSS.
 
 ## Recommended IDE Setup
 
@@ -40,16 +40,6 @@ npm run test:unit
 npm run test:e2e:dev
 ```
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
@@ -58,5 +48,6 @@ npm run lint
 
 ## Deployment
 
-1. Compile and Minify for Production
-1. Copy /dist folder to /docs folder
+Automatic via GitHub Actions (`.github/workflows/deploy.yml`): every push to `main` builds the app and deploys `dist/` to GitHub Pages.
+
+> Ensure the Pages source is set to **"GitHub Actions"** in the repo's Settings → Pages.
