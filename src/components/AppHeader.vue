@@ -28,8 +28,8 @@ watch(
           to="/about">About</RouterLink>
         <RouterLink active-class="text-brand" class="px-3 py-2 text-sm transition-colors duration-200 rounded-lg text-light hover:text-lightest hover:bg-dark"
           to="/portfolio">Portfolio</RouterLink>
-        <a href="https://dev.to/ejayarma" target="_blank" rel="noopener noreferrer"
-          class="px-3 py-2 text-sm transition-colors duration-200 rounded-lg text-light hover:text-lightest hover:bg-dark">Blog</a>
+        <RouterLink active-class="text-brand" class="px-3 py-2 text-sm transition-colors duration-200 rounded-lg text-light hover:text-lightest hover:bg-dark"
+          to="/blog">Blog</RouterLink>
         <RouterLink active-class="text-brand" class="px-3 py-2 text-sm transition-colors duration-200 rounded-lg text-light hover:text-lightest hover:bg-dark"
           to="/contact">Contact Me</RouterLink>
       </nav>
@@ -53,8 +53,8 @@ watch(
           class="block py-3 text-xl font-medium text-center border-b border-mid/40 text-lightest" to="/about">About</RouterLink>
         <RouterLink active-class="text-brand"
           class="block py-3 text-xl font-medium text-center border-b border-mid/40 text-lightest" to="/portfolio">Portfolio</RouterLink>
-        <a href="https://dev.to/ejayarma" target="_blank" rel="noopener noreferrer"
-          class="block py-3 text-xl font-medium text-center border-b border-mid/40 text-lightest">Blog</a>
+        <RouterLink active-class="text-brand"
+          class="block py-3 text-xl font-medium text-center border-b border-mid/40 text-lightest" to="/blog">Blog</RouterLink>
         <RouterLink active-class="text-brand"
           class="block py-3 text-xl font-medium text-center border-b border-mid/40 text-lightest" to="/contact">Contact</RouterLink>
 

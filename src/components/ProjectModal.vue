@@ -187,7 +187,7 @@ watch(
 <style scoped>
 .modal-enter-active,
 .modal-leave-active {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s var(--ease-out);
 }
 
 .modal-enter-from,
@@ -197,11 +197,11 @@ watch(
 
 .modal-enter-active .card-surface,
 .modal-leave-active .card-surface {
-  transition: transform 0.3s ease;
+  transition: transform 0.25s var(--ease-out);
 }
 
 .modal-enter-from .card-surface,
 .modal-leave-to .card-surface {
-  transform: scale(0.95);
+  transform: scale(0.96);
 }
 </style>

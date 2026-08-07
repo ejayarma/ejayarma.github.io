@@ -3,7 +3,7 @@
   <div class="min-h-screen px-4 py-16">
     <div class="mx-auto max-w-5xl">
       <!-- Header Section -->
-      <div class="mb-12 text-center">
+      <div v-reveal class="mb-12 text-center">
         <p class="section-eyebrow">&gt; who am i</p>
         <h1 class="mt-2 mb-4 text-4xl font-bold tracking-tight md:text-5xl">
           ABOUT
@@ -15,7 +15,7 @@
       <div class="grid gap-8 lg:grid-cols-2">
 
         <!-- Bio Section -->
-        <div class="p-8 card-surface">
+        <div v-reveal class="p-8 card-surface">
           <h2 class="mb-4 font-mono text-sm text-brand">// bio</h2>
           <p class="text-lg leading-relaxed text-light">
             I'm a full-stack software engineer with <strong class="text-lightest">3+ years</strong> building and scaling web
@@ -31,7 +31,7 @@
         </div>
 
         <!-- Tech Stack Section -->
-        <div class="p-8 card-surface">
+        <div v-reveal="100" class="p-8 card-surface">
           <h2 class="mb-4 font-mono text-sm text-brand">// stack</h2>
           <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <div
@@ -54,7 +54,7 @@
       </div>
 
       <!-- Experience Highlights -->
-      <div class="p-8 mt-8 card-surface">
+      <div v-reveal class="p-8 mt-8 card-surface">
         <h2 class="mb-6 font-mono text-sm text-brand">// key strengths</h2>
         <div class="grid gap-4 md:grid-cols-4">
           <div v-for="stat in stats" :key="stat.label" class="p-5 text-center rounded-xl bg-darkest/60">
@@ -68,7 +68,7 @@
       <div class="mt-8">
         <h2 class="mb-6 font-mono text-sm text-brand">// experience</h2>
         <div class="space-y-6">
-          <div v-for="job in experience" :key="job.role + job.company" class="p-8 card-surface">
+          <div v-for="(job, index) in experience" :key="job.role + job.company" v-reveal="index * 80" class="p-8 card-surface">
             <div class="flex flex-wrap items-baseline justify-between gap-2">
               <h3 class="text-xl font-bold text-lightest">{{ job.role }}</h3>
               <span class="font-mono text-sm text-brand">{{ job.period }}</span>
@@ -85,7 +85,7 @@
       </div>
 
       <!-- Education & Certifications -->
-      <div class="mt-8 p-8 card-surface">
+      <div v-reveal class="mt-8 p-8 card-surface">
         <h2 class="mb-4 font-mono text-sm text-brand">// education &amp; certifications</h2>
         <div class="grid gap-6 md:grid-cols-2">
           <div>
