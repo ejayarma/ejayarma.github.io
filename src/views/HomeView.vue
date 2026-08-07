@@ -1,8 +1,62 @@
 <script setup>
+import { ref, onMounted } from 'vue';
+import { animate, stagger } from 'animejs';
 import IconX from '@/components/icons/IconX.vue';
 import IconLinkedIn from '@/components/icons/IconLinkedIn.vue';
 import IconPencilSquare from '@/components/icons/IconPencilSquare.vue';
 import IconGithub from '@/components/icons/IconGithub.vue';
+
+const nameEl = ref(null);
+
+const prefersReducedMotion = () =>
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+onMounted(() => {
+  const el = nameEl.value;
+  if (!el) return;
+
+  el.querySelectorAll('.name-letter').forEach((n) => n.remove());
+
+  const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+  const textNodes = [];
+  while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+  textNodes.forEach((node) => {
+    if (!node.textContent.trim()) return;
+    const frag = document.createDocumentFragment();
+    node.textContent.split(/(\s+)/).forEach((token) => {
+      if (!token) return;
+      if (/^\s+$/.test(token)) {
+        frag.appendChild(document.createTextNode(token));
+        return;
+      }
+      const word = document.createElement('span');
+      word.className = 'name-word';
+      token.split('').forEach((char) => {
+        const letter = document.createElement('span');
+        letter.className = 'name-letter';
+        letter.textContent = char;
+        word.appendChild(letter);
+      });
+      frag.appendChild(word);
+    });
+    node.replaceWith(frag);
+  });
+
+  if (prefersReducedMotion()) return;
+
+  const letters = el.querySelectorAll('.name-letter');
+  if (!letters.length) return;
+
+  animate(letters, {
+    opacity: [0, 1],
+    translateY: ['0.5em', 0],
+    rotate: { from: -6, to: 0 },
+    duration: 650,
+    delay: stagger(28, { start: 350 }),
+    easing: 'cubicBezier(0.23, 1, 0.32, 1)'
+  });
+});
 </script>
 
 
@@ -13,7 +67,7 @@ import IconGithub from '@/components/icons/IconGithub.vue';
       <!-- Intro -->
       <div class="max-w-xl text-center lg:text-left">
         <p v-reveal class="section-eyebrow">&gt; hello, I'm</p>
-        <h1 v-reveal="60" class="mt-3 text-4xl font-extrabold tracking-tight uppercase md:text-6xl">
+        <h1 ref="nameEl" class="mt-3 text-4xl font-extrabold tracking-tight uppercase md:text-6xl" aria-label="Emmanuel John Ayarma">
           Emmanuel John<br class="hidden sm:block" /> Ayarma
         </h1>
         <p v-reveal="120" class="mt-4 text-lg font-medium text-light">
@@ -23,7 +77,6 @@ import IconGithub from '@/components/icons/IconGithub.vue';
         <div v-reveal="180" class="flex flex-wrap justify-center gap-3 mt-8 lg:justify-start">
           <RouterLink class="btn-primary" to="/portfolio">View Portfolio</RouterLink>
           <RouterLink class="btn-secondary" to="/contact">Get in Touch</RouterLink>
-          <a class="btn-secondary" href="/Emmanuel-John-Ayarma-CV-SWE-FS.pdf" download>Download CV</a>
         </div>
 
         <div v-reveal="240" class="flex gap-4 mt-10 justify-center lg:justify-start">
@@ -91,5 +144,14 @@ import IconGithub from '@/components/icons/IconGithub.vue';
 <style scoped>
 #yarmy-card {
   box-shadow: 0px 5px 24px 2px rgba(91, 192, 190, 0.2);
+}
+
+.name-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.name-letter {
+  display: inline-block;
 }
 </style>
