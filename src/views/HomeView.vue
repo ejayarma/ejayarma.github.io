@@ -22,6 +22,7 @@ import IconGithub from '@/components/icons/IconGithub.vue';
         <div class="flex flex-wrap justify-center gap-3 mt-8 lg:justify-start">
           <RouterLink class="btn-primary" to="/portfolio">View Portfolio</RouterLink>
           <RouterLink class="btn-secondary" to="/contact">Get in Touch</RouterLink>
+          <a class="btn-secondary" href="/Emmanuel-John-Ayarma-CV-SWE-FS.pdf" download>Download CV</a>
         </div>
 
         <div class="flex gap-4 mt-10 justify-center lg:justify-start">
@@ -63,6 +64,24 @@ import IconGithub from '@/components/icons/IconGithub.vue';
           </div>
         </dl>
       </div>
+    </div>
+  </section>
+
+  <!-- CV Download Section -->
+  <section class="px-6 py-16 border-t border-mid/40">
+    <div class="card-surface max-w-4xl mx-auto p-8 text-center md:p-12">
+      <p class="section-eyebrow">&gt; curriculum vitae</p>
+      <h2 class="mt-2 mb-4 text-3xl font-bold tracking-tight md:text-4xl">Get My CV</h2>
+      <p class="mx-auto mb-8 max-w-2xl text-lg text-light">
+        Want the full story? Download my resume for a complete breakdown of my experience,
+        projects, and skills — from national-scale systems to mobile apps.
+      </p>
+      <a class="btn-primary" href="/Emmanuel-John-Ayarma-CV-SWE-FS.pdf" download>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        Download CV (PDF)
+      </a>
     </div>
   </section>
 </template>
