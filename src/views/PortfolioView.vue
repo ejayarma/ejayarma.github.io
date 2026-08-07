@@ -1,33 +1,55 @@
 <!-- src/views/PortfolioView.vue -->
 <template>
-  <div class="min-h-screen px-4 py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-    <div class="mx-auto max-w-7xl">
+  <div class="min-h-screen px-4 py-16">
+    <div class="mx-auto max-w-6xl">
       <!-- Header Section -->
-      <div class="mb-16 text-center">
-        <h1 class="mb-4 text-5xl font-bold tracking-tight text-white">
+      <div class="mb-12 text-center">
+        <p class="section-eyebrow">&gt; selected work</p>
+        <h1 class="mt-2 mb-4 text-4xl font-bold tracking-tight md:text-5xl">
           PORTFOLIO
         </h1>
-        <p class="max-w-2xl mx-auto text-xl text-slate-300">
-          Explore my collection of web and mobile applications built with modern technologies
+        <p class="max-w-2xl mx-auto text-lg text-light">
+          National-scale systems, enterprise platforms, and mobile apps I've designed, built, and shipped.
         </p>
       </div>
 
-      <!-- Web Projects Section -->
-      <ProjectSection 
-        title="Web Projects" 
-        :projects="webProjects"
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap justify-center gap-2 mb-12" role="tablist" aria-label="Filter projects">
+        <button
+          v-for="filter in filters"
+          :key="filter.key"
+          type="button"
+          role="tab"
+          :aria-selected="activeFilter === filter.key"
+          class="px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full cursor-pointer"
+          :class="activeFilter === filter.key ? 'bg-brand text-darkest' : 'bg-dark text-light hover:text-lightest border border-mid/50'"
+          @click="activeFilter = filter.key"
+        >
+          {{ filter.label }}
+        </button>
+      </div>
+
+      <!-- Projects -->
+      <ProjectSection
+        v-if="filteredProjects.length"
+        :projects="filteredProjects"
         @project-click="openModal"
       />
 
-      <!-- Mobile Projects Section -->
-      <ProjectSection 
-        title="Mobile Projects" 
-        :projects="mobileProjects"
-        @project-click="openModal"
-      />
+      <div v-else class="py-20 text-center text-light">
+        <p class="text-lg font-medium text-lightest">No projects in this category yet.</p>
+        <p class="mt-1 text-light">New work is always on the way. Browse everything instead.</p>
+        <button
+          type="button"
+          class="mt-6 btn-secondary"
+          @click="activeFilter = 'all'"
+        >
+          Show All Projects
+        </button>
+      </div>
 
       <!-- Project Modal -->
-      <ProjectModal 
+      <ProjectModal
         :isOpen="isModalOpen"
         :project="selectedProject"
         @close="closeModal"
@@ -37,102 +59,69 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, computed } from 'vue'
 import ProjectSection from '@/components/ProjectSection.vue'
 import ProjectModal from '@/components/ProjectModal.vue'
 
-// Modal state
 const isModalOpen = ref(false)
 const selectedProject = ref(null)
+const activeFilter = ref('all')
 
-// Sample project data - replace with your actual data
-const webProjects = reactive([
+const filters = [
+  { key: 'all', label: 'All' },
+  { key: 'web', label: 'Web' },
+  { key: 'mobile', label: 'Mobile' }
+]
+
+const projects = [
   {
     id: 1,
-    title: 'The Ghana Knowledge and Skills Bank',
-    description: 'A comprehensive digital platform for managing educational resources and skills development programs across Ghana.',
-    shortDescription: 'Educational resource management platform',
-    image: '/src/assets/images/hero-pic.png',
-    images: [
-      '/src/assets/images/hero-pic.png',
-      '/src/assets/images/hero-pic2.png',
-      '/src/assets/images/abstract-cloud.jpeg'
-    ],
-    technologies: ['Vue.js', 'Laravel', 'MySQL', 'Tailwind CSS'],
-    liveUrl: 'https://example.com/gksb',
-    githubUrl: 'https://github.com/example/gksb',
+    title: 'Ghana Births & Deaths Registry Digitalisation',
+    description: 'Full-stack features for a World Bank–funded national digital identity and civil registration system serving millions of citizens. Delivered assigned milestones ahead of schedule for the Ghana Births and Deaths Registry Harmonisation and Digitalisation programme.',
+    shortDescription: 'National digital identity & civil registration system (World Bank–funded)',
+    technologies: ['Laravel', 'JavaScript', 'MySQL', 'Nginx'],
+    liveUrl: null,
+    githubUrl: null,
     category: 'web'
   },
   {
     id: 2,
-    title: 'Digitalization of Ghana Births and Deaths Registry',
-    description: 'Modern digital solution for managing birth and death certificates, streamlining the registration process and improving accessibility for citizens.',
-    shortDescription: 'Government registry digitalization system',
-    image: '/src/assets/images/hero-pic2.png',
-    images: [
-      '/src/assets/images/hero-pic2.png',
-      '/src/assets/images/hero-pic.png',
-      '/src/assets/images/abstract-cloud.jpeg'
-    ],
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'Docker'],
-    liveUrl: 'https://example.com/registry',
-    githubUrl: 'https://github.com/example/registry',
+    title: 'Ghana Knowledge and Skills Bank',
+    description: 'A national platform for managing educational resources and skills development programmes across Ghana — built to give learners and administrators one clear place to work.',
+    shortDescription: 'National educational resource management platform',
+    technologies: ['Vue.js', 'Laravel', 'MySQL', 'Tailwind CSS'],
+    liveUrl: null,
+    githubUrl: null,
     category: 'web'
   },
   {
     id: 3,
-    title: 'Fidelity Customer Self-Service Portal',
-    description: 'A comprehensive self-service portal enabling Fidelity customers to manage their accounts, transactions, and services independently.',
-    shortDescription: 'Banking self-service portal',
-    image: '/src/assets/images/abstract-cloud.jpeg',
-    images: [
-      '/src/assets/images/abstract-cloud.jpeg',
-      '/src/assets/images/hero-pic.png',
-      '/src/assets/images/hero-pic2.png'
-    ],
-    technologies: ['Angular', 'Spring Boot', 'Oracle', 'Bootstrap'],
-    liveUrl: 'https://example.com/fidelity',
-    githubUrl: 'https://github.com/example/fidelity',
+    title: 'Kedebah ERP System',
+    description: 'Scalable, loosely coupled module APIs for a multi-tenant ERP system. Reduced API latency by 20% and increased throughput to support over 100 concurrent tenants.',
+    shortDescription: 'Multi-tenant ERP with loosely coupled module APIs',
+    technologies: ['Flask', 'Laravel', 'Redis', 'Nginx', 'PostgreSQL'],
+    liveUrl: null,
+    githubUrl: null,
     category: 'web'
-  }
-])
-
-const mobileProjects = reactive([
-  {
-    id: 4,
-    title: 'KinzCut Mobile',
-    description: 'A modern mobile application for booking hair salon appointments, managing schedules, and connecting customers with professional stylists.',
-    shortDescription: 'Hair salon booking app',
-    image: '/src/assets/images/hero-pic.png',
-    images: [
-      '/src/assets/images/hero-pic.png',
-      '/src/assets/images/hero-pic2.png',
-      '/src/assets/images/abstract-cloud.jpeg'
-    ],
-    technologies: ['Flutter', 'Firebase', 'Dart', 'Google Maps API'],
-    liveUrl: 'https://play.google.com/store/apps/details?id=com.kinzcut',
-    githubUrl: 'https://github.com/example/kinzcut',
-    category: 'mobile'
   },
   {
-    id: 5,
-    title: 'Trofare',
-    description: 'A comprehensive travel and fare comparison mobile application that helps users find the best transportation options and prices.',
-    shortDescription: 'Travel & fare comparison app',
-    image: '/src/assets/images/hero-pic2.png',
-    images: [
-      '/src/assets/images/hero-pic2.png',
-      '/src/assets/images/hero-pic.png',
-      '/src/assets/images/abstract-cloud.jpeg'
-    ],
-    technologies: ['React Native', 'Node.js', 'MongoDB', 'Stripe API'],
-    liveUrl: 'https://example.com/trofare',
-    githubUrl: 'https://github.com/example/trofare',
+    id: 4,
+    title: 'HubConnect Mobile Application',
+    description: 'A mobile platform connecting agricultural stakeholders. Reduced post-harvest losses to near-zero and expanded farmer access to agrochemical and agri-input resources for over 1,000 users.',
+    shortDescription: 'Agri-tech mobile platform connecting agricultural stakeholders',
+    technologies: ['Flutter', 'Laravel', 'REST APIs'],
+    liveUrl: null,
+    githubUrl: null,
     category: 'mobile'
   }
-])
+]
 
-// Modal functions
+const filteredProjects = computed(() =>
+  activeFilter.value === 'all'
+    ? projects
+    : projects.filter((p) => p.category === activeFilter.value)
+)
+
 const openModal = (project) => {
   selectedProject.value = project
   isModalOpen.value = true
@@ -143,7 +132,3 @@ const closeModal = () => {
   selectedProject.value = null
 }
 </script>
-
-<style scoped>
-/* Add any additional styles here */
-</style>

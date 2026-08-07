@@ -28,3 +28,9 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Private docs - never deployed to GitHub Pages
+/.private/
+
+# Added by code-review-graph
+.code-review-graph/
