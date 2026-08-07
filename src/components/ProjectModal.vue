@@ -100,7 +100,7 @@
                 <div v-else-if="project?.confidential">
                   <h3 class="mb-3 font-mono text-sm text-brand">// access</h3>
                   <p class="leading-relaxed text-light">
-                    Client project under NDA — the codebase and live demo aren't public.
+                    Client project under NDA. The codebase and live demo aren't public.
                     <a
                       href="mailto:johnayarmahe@gmail.com?subject=Portfolio%20walkthrough%20request"
                       class="font-medium text-brand hover:text-brandBright"
