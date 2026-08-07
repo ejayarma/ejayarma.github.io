@@ -3,7 +3,7 @@
   <div class="min-h-screen px-4 py-16">
     <div class="mx-auto max-w-6xl">
       <!-- Header Section -->
-      <div class="mb-12 text-center">
+      <div v-reveal class="mb-12 text-center">
         <p class="section-eyebrow">&gt; selected work</p>
         <h1 class="mt-2 mb-4 text-4xl font-bold tracking-tight md:text-5xl">
           PORTFOLIO
@@ -14,7 +14,7 @@
       </div>
 
       <!-- Filter Tabs -->
-      <div class="flex flex-wrap justify-center gap-2 mb-12" role="tablist" aria-label="Filter projects">
+      <div v-reveal="80" class="flex flex-wrap justify-center gap-2 mb-12" role="tablist" aria-label="Filter projects">
         <button
           v-for="filter in filters"
           :key="filter.key"

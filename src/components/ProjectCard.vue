@@ -1,7 +1,7 @@
 <!-- src/components/ProjectCard.vue -->
 <template>
   <article
-    class="overflow-hidden transition-[transform,box-shadow] duration-300 card-surface group hover:shadow-glow hover:-translate-y-1"
+    class="overflow-hidden transition-[transform,box-shadow] duration-200 ease-smooth card-surface group hover:shadow-glow hover:-translate-y-1"
   >
     <!-- Decorative header tile (CSS only, no images) -->
     <div class="relative h-24 overflow-hidden bg-darkest">

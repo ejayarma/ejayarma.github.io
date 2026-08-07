@@ -4,7 +4,7 @@
     <div class="mx-auto max-w-4xl">
 
       <!-- Header Section -->
-      <div class="mb-12 text-center">
+      <div v-reveal class="mb-12 text-center">
         <p class="section-eyebrow">&gt; say hello</p>
         <h1 class="mt-2 mb-4 text-4xl font-bold tracking-tight md:text-5xl">
           CONTACT ME
@@ -22,7 +22,7 @@
       <div class="grid gap-8 mb-12 md:grid-cols-2">
 
         <!-- Email Card -->
-        <div class="p-8 card-surface transition-shadow duration-300 hover:shadow-glow">
+        <div v-reveal class="p-8 card-surface transition-[transform,box-shadow] duration-200 ease-smooth hover:shadow-glow hover:-translate-y-1">
           <h3 class="mb-2 text-xl font-bold text-lightest">Email</h3>
           <p class="mb-4 text-sm text-light">Send me a message. I reply fast.</p>
           <a href="mailto:johnayarmahe@gmail.com"
@@ -32,7 +32,7 @@
         </div>
 
         <!-- Start a Project Card -->
-        <div class="p-8 card-surface transition-shadow duration-300 hover:shadow-glow">
+        <div v-reveal="100" class="p-8 card-surface transition-[transform,box-shadow] duration-200 ease-smooth hover:shadow-glow hover:-translate-y-1">
           <h3 class="mb-2 text-xl font-bold text-lightest">Start a Project</h3>
           <p class="mb-4 text-sm text-light">Skip the small talk. Send your pitch straight to my inbox.</p>
           <a href="mailto:johnayarmahe@gmail.com?subject=Project%20inquiry"
@@ -44,7 +44,7 @@
       </div>
 
       <!-- Social Links Section -->
-      <div class="p-8 card-surface">
+      <div v-reveal class="p-8 card-surface">
         <h2 class="mb-6 font-mono text-sm text-brand">// find me online</h2>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
@@ -108,7 +108,7 @@
       </div>
 
       <!-- Call to Action -->
-      <div class="mt-12 text-center">
+      <div v-reveal class="mt-12 text-center">
         <div class="p-10 card-surface border-brand/30">
           <h3 class="mb-4 text-2xl font-bold">Have a Project in Mind?</h3>
           <p class="max-w-2xl mx-auto mb-6 text-light">

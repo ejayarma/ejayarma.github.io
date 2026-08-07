@@ -2,8 +2,9 @@
 <template>
   <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
     <ProjectCard
-      v-for="project in projects"
+      v-for="(project, index) in projects"
       :key="project.id"
+      v-reveal="index * 60"
       :project="project"
       @click="$emit('project-click', project)"
     />

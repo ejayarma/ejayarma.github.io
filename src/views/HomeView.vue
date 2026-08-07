@@ -11,21 +11,21 @@ import IconGithub from '@/components/icons/IconGithub.vue';
     <div class="flex flex-col items-center justify-center gap-12 px-6 py-16 mx-auto max-w-6xl lg:flex-row lg:gap-20">
       <!-- Intro -->
       <div class="max-w-xl text-center lg:text-left">
-        <p class="section-eyebrow">&gt; hello, I'm</p>
-        <h1 class="mt-3 text-4xl font-extrabold tracking-tight uppercase md:text-6xl">
+        <p v-reveal class="section-eyebrow">&gt; hello, I'm</p>
+        <h1 v-reveal="60" class="mt-3 text-4xl font-extrabold tracking-tight uppercase md:text-6xl">
           Emmanuel John<br class="hidden sm:block" /> Ayarma
         </h1>
-        <p class="mt-4 text-lg font-medium text-light">
+        <p v-reveal="120" class="mt-4 text-lg font-medium text-light">
           Full-Stack Software Engineer building &amp; scaling <span class="text-brand">web apps, RESTful APIs, and mobile solutions</span> across fintech, civic-tech, agri-tech, and ERP domains.
         </p>
 
-        <div class="flex flex-wrap justify-center gap-3 mt-8 lg:justify-start">
+        <div v-reveal="180" class="flex flex-wrap justify-center gap-3 mt-8 lg:justify-start">
           <RouterLink class="btn-primary" to="/portfolio">View Portfolio</RouterLink>
           <RouterLink class="btn-secondary" to="/contact">Get in Touch</RouterLink>
           <a class="btn-secondary" href="/Emmanuel-John-Ayarma-CV-SWE-FS.pdf" download>Download CV</a>
         </div>
 
-        <div class="flex gap-4 mt-10 justify-center lg:justify-start">
+        <div v-reveal="240" class="flex gap-4 mt-10 justify-center lg:justify-start">
           <a class="p-2 rounded-full bg-brand text-darkest transition-transform duration-200 hover:scale-110 cursor-pointer" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" href="https://www.linkedin.com/in/emmanuel-john-ayarma">
             <IconLinkedIn class="size-6" />
           </a>
@@ -42,7 +42,7 @@ import IconGithub from '@/components/icons/IconGithub.vue';
       </div>
 
       <!-- Stats card -->
-      <div id="yarmy-card" class="card-surface w-full max-w-sm p-8">
+      <div id="yarmy-card" v-reveal="120" class="card-surface w-full max-w-sm p-8">
         <img class="mx-auto rounded-full size-40 border-2 border-brand" src="/moi.webp" alt="Emmanuel John Ayarma" width="160" height="160" fetchpriority="high">
         <h2 class="mt-5 font-mono text-sm text-brand">// highlights</h2>
         <dl class="grid grid-cols-2 gap-4 mt-3">
@@ -69,7 +69,7 @@ import IconGithub from '@/components/icons/IconGithub.vue';
 
   <!-- CV Download Section -->
   <section class="px-6 py-16 border-t border-mid/40">
-    <div class="card-surface max-w-4xl mx-auto p-8 text-center md:p-12">
+    <div v-reveal class="card-surface max-w-4xl mx-auto p-8 text-center md:p-12">
       <p class="section-eyebrow">&gt; curriculum vitae</p>
       <h2 class="mt-2 mb-4 text-3xl font-bold tracking-tight md:text-4xl">Get My CV</h2>
       <p class="mx-auto mb-8 max-w-2xl text-lg text-light">

@@ -12,6 +12,10 @@ import AppHeader from './components/AppHeader.vue'
   </a>
   <AppHeader />
   <main id="main-content">
-    <RouterView />
+    <RouterView v-slot="{ Component }">
+      <Transition name="page" mode="out-in">
+        <component :is="Component" />
+      </Transition>
+    </RouterView>
   </main>
 </template>
