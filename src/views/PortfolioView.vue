@@ -82,6 +82,7 @@ const projects = [
     technologies: ['Laravel', 'JavaScript', 'MySQL', 'Nginx'],
     liveUrl: null,
     githubUrl: null,
+    confidential: true,
     category: 'web'
   },
   {
@@ -92,6 +93,7 @@ const projects = [
     technologies: ['Vue.js', 'Laravel', 'MySQL', 'Tailwind CSS'],
     liveUrl: null,
     githubUrl: null,
+    confidential: true,
     category: 'web'
   },
   {
@@ -102,6 +104,7 @@ const projects = [
     technologies: ['Flask', 'Laravel', 'Redis', 'Nginx', 'PostgreSQL'],
     liveUrl: null,
     githubUrl: null,
+    confidential: true,
     category: 'web'
   },
   {
@@ -112,6 +115,7 @@ const projects = [
     technologies: ['Flutter', 'Laravel', 'REST APIs'],
     liveUrl: null,
     githubUrl: null,
+    confidential: true,
     category: 'mobile'
   }
 ]
