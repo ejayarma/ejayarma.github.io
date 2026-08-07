@@ -38,7 +38,11 @@
               :key="tech.name"
               class="flex items-center p-3 transition-colors duration-200 border rounded-lg border-mid/50 hover:border-brand/50"
             >
-              <div class="w-2.5 h-2.5 mr-3 rounded-full bg-brand"></div>
+              <Icon
+                class="w-6 h-6 mr-3 text-brand shrink-0"
+                :icon="tech.icon"
+                aria-hidden="true"
+              />
               <span class="text-sm font-medium text-lightest">
                 {{ tech.name }}
               </span>
@@ -99,19 +103,21 @@
 </template>
 
 <script setup>
+import { Icon } from '@iconify/vue'
+
 const techStack = [
-  { name: 'Java / Spring Boot' },
-  { name: '.NET Core' },
-  { name: 'Laravel' },
-  { name: 'Flask / FastAPI' },
-  { name: 'Vue.js' },
-  { name: 'Flutter' },
-  { name: 'PostgreSQL & MySQL' },
-  { name: 'Redis' },
-  { name: 'Nginx' },
-  { name: 'AWS Cloud' },
-  { name: 'Microservices & Multi-Tenant' },
-  { name: 'CI/CD' }
+  { name: 'Spring Boot', icon: 'si:springboot' },
+  { name: '.NET Core', icon: 'si:dotnet' },
+  { name: 'Laravel', icon: 'si:laravel' },
+  { name: 'FastAPI', icon: 'si:fastapi' },
+  { name: 'Vue.js', icon: 'si:vuedotjs' },
+  { name: 'Flutter', icon: 'si:flutter' },
+  { name: 'PostgreSQL', icon: 'si:postgresql' },
+  { name: 'Redis', icon: 'si:redis' },
+  { name: 'Nginx', icon: 'si:nginx' },
+  { name: 'AWS', icon: 'si:amazonwebservices' },
+  { name: 'Microservices', icon: 'lucide:boxes' },
+  { name: 'CI/CD', icon: 'lucide:workflow' }
 ]
 
 const stats = [
